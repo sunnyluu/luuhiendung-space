@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lưu Hiển Dũng Space - Không gian cá nhân, ý tưởng công nghệ và các dự án phát triển cộng đồng xanh.">
-  <title>Lưu Hiển Dũng | Personal Space</title>
+  <meta name="description" content="Lưu Hiền Dung (luuhiendung.space) - Nhà thực hành khoa học ứng dụng, Giám đốc Trung tâm Dưỡng Thân – Dưỡng Tâm (Lâm Đồng), Trọng tài quốc tế Thể thao Trí tuệ.">
+  <title>Lưu Hiền Dung | luuhiendung.space</title>
   
-  <!-- Phông chữ Google Fonts -->
+  <!-- Phông chữ Google Fonts chuẩn mực -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- CSS chính -->
   <link rel="stylesheet" href="css/style.css">
@@ -17,25 +17,29 @@
 <body>
 
   <!-- ========================================================================
-       CÁC KHỐI THÀNH PHẦN LẮP GHÉP (COMPONENTS)
-       Mỗi khối được tự động nạp từ thư mục components/ qua file js/app.js
+       CẤU TRÚC 6 MẢNH GHÉP ĐỘC LẬP (MODULAR COMPONENTS)
+       Mỗi khối được tự động nạp từ thư mục components/ qua js/app.js
        ======================================================================== -->
 
   <!-- 1. Thanh Menu Điều hướng đầu trang (Header) -->
   <div data-component="components/header.html" id="header-mount"></div>
 
-  <!-- 2. Phần Giới thiệu mở đầu nổi bật (Hero Section) -->
+  <!-- Phần Nội dung Thân trang -->
   <main>
+    <!-- 2. Phần Chào đầu trang & Định vị cốt lõi (Hero Section) -->
     <div data-component="components/hero.html" id="hero-mount"></div>
 
-    <!-- 3. Phần Giới thiệu bản thân & Triết lý (About Section) -->
+    <!-- 3. Phần Hành trình & Giá trị Thân - Tâm - Trí (About Section) -->
     <div data-component="components/about.html" id="about-mount"></div>
 
-    <!-- 4. Phần Các dự án tiêu biểu (Projects Section) -->
+    <!-- 4. Phần 4 Trụ cột chuyên môn (Pillars Section) -->
+    <div data-component="components/pillars.html" id="pillars-mount"></div>
+
+    <!-- 5. Phần Các dự án cộng đồng & Hoạt động đào tạo (Projects Section) -->
     <div data-component="components/projects.html" id="projects-mount"></div>
   </main>
 
-  <!-- 5. Chân trang (Footer) -->
+  <!-- 6. Chân trang & Thông tin kết nối (Footer) -->
   <div data-component="components/footer.html" id="footer-mount"></div>
 
   <!-- JavaScript điều khiển nạp component và hiệu ứng -->
