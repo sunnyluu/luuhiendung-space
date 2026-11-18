@@ -1,6 +1,6 @@
-# Lưu Hiển Dũng Space (`luuhiendung-space`)
+# Lưu Hiền Dung Space (`luuhiendung-space`)
 
-Không gian chia sẻ cá nhân, ý tưởng công nghệ và các dự án phát triển cộng đồng vì một tương lai xanh và bền vững của **Lưu Hiển Dũng**.
+Không gian chia sẻ cá nhân, ý tưởng công nghệ và các dự án phát triển cộng đồng vì một tương lai xanh và bền vững của **Lưu Hiền Dung**.
 
 ---
 
