@@ -1,0 +1,52 @@
+<!-- ==========================================================================
+     COMPONENT: HEADER (Thanh menu điều hướng đầu trang)
+     Phong cách: Tinh tế, Chữ lớn dễ đọc, Tông màu trang nhã
+     ========================================================================== -->
+<header class="site-header" id="header">
+  <div class="container header-container">
+    
+    <!-- Logo & Nhãn nhận diện cá nhân -->
+    <a href="#hero" class="site-logo" aria-label="Lưu Hiển Dũng - Trang chủ">
+      <div class="logo-badge">LH</div>
+      <div class="logo-text">
+        <span class="logo-name">Lưu Hiển Dũng</span>
+        <span class="logo-sub">Space & Ideas</span>
+      </div>
+    </a>
+
+    <!-- Menu điều hướng chính -->
+    <nav class="site-nav" id="site-navigation" aria-label="Điều hướng chính">
+      <ul class="nav-list">
+        <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+        <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+        <li><a href="#projects" class="nav-link">Dự án</a></li>
+        <li><a href="#vision" class="nav-link">Triết lý xanh</a></li>
+        <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+      </ul>
+
+      <!-- Nút hành động trên màn hình di động -->
+      <a href="#contact" class="btn btn-primary mobile-cta">Gửi tin nhắn</a>
+    </nav>
+
+    <!-- Nút tương tác bên phải (Desktop) & Nút mở menu di động -->
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-primary">
+        <span>Kết nối ngay</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+
+      <!-- Nút Hamburger Menu (dành cho điện thoại / máy tính bảng) -->
+      <button class="mobile-toggle" aria-label="Mở bảng điều hướng" aria-controls="site-navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>

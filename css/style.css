@@ -1,0 +1,428 @@
+/* ==========================================================================
+   LUU HIEN DUNG SPACE - GLOBAL STYLESHEET
+   Phong cách: Tinh tế, Chữ lớn dễ đọc, Tông màu trang nhã
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* --- 1. CSS VARIABLES (DESIGN TOKENS) --- */
+:root {
+  --bg-primary: #FAF9F6;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F4F3EF;
+  --bg-glass: rgba(250, 249, 246, 0.88);
+  --bg-glass-card: rgba(255, 255, 255, 0.75);
+
+  --text-main: #1C2024;
+  --text-muted: #59636E;
+  --text-faint: #8B949E;
+  --text-inverse: #FFFFFF;
+
+  --brand-primary: #1F3A34;
+  --brand-primary-hover: #162B26;
+  --brand-accent: #C5A880;
+  --brand-accent-hover: #B59569;
+  --brand-accent-soft: #F5EFEB;
+
+  --border-subtle: #E8E6E1;
+  --border-card: rgba(232, 230, 225, 0.8);
+  --border-focus: #C5A880;
+
+  --shadow-sm: 0 2px 8px rgba(28, 32, 36, 0.04);
+  --shadow-md: 0 8px 24px rgba(28, 32, 36, 0.06);
+  --shadow-lg: 0 16px 40px rgba(28, 32, 36, 0.08);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --transition-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --header-height: 84px;
+}
+
+/* --- 2. CSS RESET & NỀN TẢNG --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px; /* Cỡ chữ cơ bản lớn, rõ nét */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.75;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- 3. BỐ CỤC CHUNG (CONTAINER & TYPOGRAPHY) --- */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 2.85rem;
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+p.lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+/* --- 4. CÁC NÚT BẤM (BUTTONS) TRANG NHÃ --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 1px solid transparent;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: var(--text-inverse);
+  box-shadow: 0 4px 14px rgba(31, 58, 52, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(31, 58, 52, 0.28);
+  color: var(--text-inverse);
+}
+
+.btn-accent {
+  background-color: var(--brand-accent);
+  color: var(--text-inverse);
+}
+
+.btn-accent:hover {
+  background-color: var(--brand-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(197, 168, 128, 0.35);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--brand-primary);
+  background-color: var(--bg-surface);
+  color: var(--brand-primary);
+}
+
+/* --- 5. KHUNG CHỨA CÁC PHẦN (SECTIONS) --- */
+.section {
+  padding: 90px 0;
+  position: relative;
+}
+
+.section-alt {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-accent);
+  background-color: var(--brand-accent-soft);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 18px;
+}
+
+/* Thẻ mẫu (Card) */
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-accent);
+}
+
+/* --- 6. PHẦN THANH MENU ĐẦU TRANG (HEADER STYLES) --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.site-header.scrolled {
+  box-shadow: var(--shadow-sm);
+  background-color: rgba(250, 249, 246, 0.96);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.logo-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--brand-primary) 0%, #2A4E45 100%);
+  color: var(--text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 10px rgba(31, 58, 52, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.site-logo:hover .logo-badge {
+  transform: rotate(-3deg) scale(1.05);
+  box-shadow: 0 6px 16px rgba(31, 58, 52, 0.28);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.logo-sub {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--brand-accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Navigation Links */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  position: relative;
+  padding: 8px 2px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--brand-accent);
+  transition: width 0.28s ease-in-out;
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: var(--brand-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-subtle);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  padding: 10px;
+  color: var(--text-main);
+}
+
+.mobile-toggle svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+}
+
+/* Responsive Menu */
+@media (max-width: 860px) {
+  .site-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+  }
+
+  .site-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-actions .btn {
+    display: none;
+  }
+
+  .site-nav .mobile-cta {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+/* --- 7. FOOTER STYLES --- */
+.site-footer {
+  margin-top: auto;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  padding: 60px 0 36px;
+}
