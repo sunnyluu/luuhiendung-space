@@ -1,49 +1,250 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lưu Hiền Dung (luuhiendung.space) - Nhà thực hành khoa học ứng dụng, Giám đốc Trung tâm Dưỡng Thân – Dưỡng Tâm (Lâm Đồng), Trọng tài quốc tế Thể thao Trí tuệ.">
-  <title>Lưu Hiền Dung | luuhiendung.space</title>
-  
-  <!-- Phông chữ Google Fonts chuẩn mực -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lưu Hiền Dung Space — Khoa học Ứng dụng & Thể thao Trí tuệ</title>
+  <meta name="description" content="Không gian chia sẻ chuyên môn của Lưu Hiền Dung: Luyện giọng nói nội lực, Đọc sách nhanh, Sơ đồ tư duy và Ứng dụng AI trong giáo dục." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS chính -->
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========================================================================
-       CẤU TRÚC 6 MẢNH GHÉP ĐỘC LẬP (MODULAR COMPONENTS)
-       Mỗi khối được tự động nạp từ thư mục components/ qua js/app.js
-       ======================================================================== -->
+  <header>
+    <a href="#" class="brand-logo">Lưu Hiền Dung <span>Space</span></a>
+    <nav>
+      <a href="#triet-ly">Triết lý</a>
+      <a href="#tru-cot">4 Trụ cột</a>
+      <a href="#dau-an">Dấu ấn</a>
+      <a href="#chuong-trinh">Đồng hành</a>
+      <a href="#phan-hoi">Gửi lời nhắn</a>
+    </nav>
+  </header>
 
-  <!-- 1. Thanh Menu Điều hướng đầu trang (Header) -->
-  <div data-component="components/header.html" id="header-mount"></div>
+  <!-- 1. HERO -->
+  <div class="hero reveal-layer">
+    <div>
+      <div class="hero-subtitle" id="hero-subtitle"></div>
+      <h1 id="hero-title"></h1>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <div class="btn-group">
+        <a href="#tru-cot" class="btn-primary" id="hero-cta1"></a>
+        <a href="#phan-hoi" class="btn-outline" id="hero-cta2"></a>
+      </div>
+    </div>
+    <div class="hero-image-frame">
+      <img id="hero-img" src="" alt="Lưu Hiền Dung" />
+    </div>
+  </div>
 
-  <!-- Phần Nội dung Thân trang -->
-  <main>
-    <!-- 2. Phần Chào đầu trang & Định vị cốt lõi (Hero Section) -->
-    <div data-component="components/hero.html" id="hero-mount"></div>
+  <!-- 2. TRIẾT LÝ & THỰC CHỨNG -->
+  <section id="triet-ly" class="reveal-layer">
+    <div class="about-box">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h2 id="about-heading"></h2>
+        <div class="divider-gold"></div>
+      </div>
+      <div class="about-text" id="about-paragraphs"></div>
+      <div class="stats-grid" id="about-stats"></div>
+    </div>
+  </section>
 
-    <!-- 3. Phần Hành trình & Giá trị Thân - Tâm - Trí (About Section) -->
-    <div data-component="components/about.html" id="about-mount"></div>
+  <!-- 3. BỐN TRỤ CỘT CHUYÊN MÔN -->
+  <section id="tru-cot" class="reveal-layer">
+    <div class="section-header">
+      <h2>Bốn Trụ Cột Tri Thức Ứng Dụng</h2>
+      <div class="divider-gold"></div>
+      <p style="color: var(--text-muted);">Hệ thống phương pháp thực chứng giúp khai mở năng lượng tự thân và tối ưu hiệu suất học tập, làm việc.</p>
+    </div>
+    <div class="pillars-grid" id="pillars-container"></div>
+  </section>
 
-    <!-- 4. Phần 4 Trụ cột chuyên môn (Pillars Section) -->
-    <div data-component="components/pillars.html" id="pillars-mount"></div>
+  <!-- 4. DẤU ẤN THỰC TẾ (SLIDER) -->
+  <section id="dau-an" class="reveal-layer">
+    <div class="gallery-wrapper">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h2>Dấu Ấn Thực Chứng & Phụng Sự</h2>
+        <div class="divider-gold"></div>
+      </div>
+      <div class="slide-container">
+        <img id="slide-img" class="slide-img" src="" alt="Hoạt động chuyên môn" />
+        <p id="slide-caption" class="slide-caption"></p>
+        <div class="slide-controls">
+          <button class="slide-btn" onclick="changeSlide(-1)">← Trước</button>
+          <button class="slide-btn" onclick="changeSlide(1)">Tiếp →</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- 5. Phần Các dự án cộng đồng & Hoạt động đào tạo (Projects Section) -->
-    <div data-component="components/projects.html" id="projects-mount"></div>
-  </main>
+  <!-- 5. CHƯƠNG TRÌNH ĐỒNG HÀNH -->
+  <section id="chuong-trinh" class="reveal-layer">
+    <div class="section-header">
+      <h2>Không Gian Rèn Luyện & Cộng Đồng</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="programs-grid" id="programs-container"></div>
+  </section>
 
-  <!-- 6. Chân trang & Thông tin kết nối (Footer) -->
-  <div data-component="components/footer.html" id="footer-mount"></div>
+  <!-- 6. FORM NHẮN PHẢN HỒI TRỰC TIẾP -->
+  <section id="phan-hoi" class="reveal-layer">
+    <div class="contact-section">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h2 id="form-heading"></h2>
+        <div class="divider-gold"></div>
+        <p id="form-subheading" style="color: var(--text-muted);"></p>
+      </div>
 
-  <!-- JavaScript điều khiển nạp component và hiệu ứng -->
-  <script src="js/app.js"></script>
+      <div id="form-render-area"></div>
+    </div>
+  </section>
 
+  <footer>
+    <p>© 2026 Lưu Hiền Dung Space (luuhiendung.space) • Khoa học Ứng dụng, Dưỡng Thân – Dưỡng Tâm & Thể thao Trí tuệ.</p>
+  </footer>
+
+  <script src="content-data.js"></script>
+  <script>
+    // Đổ dữ liệu từ content-data.js vào giao diện
+    document.getElementById('hero-subtitle').textContent = SITE_DATA.hero.subtitle;
+    document.getElementById('hero-title').textContent = SITE_DATA.hero.title;
+    document.getElementById('hero-tagline').textContent = SITE_DATA.hero.tagline;
+    document.getElementById('hero-cta1').textContent = SITE_DATA.hero.ctaPrimary;
+    document.getElementById('hero-cta2').textContent = SITE_DATA.hero.ctaSecondary;
+    document.getElementById('hero-img').src = SITE_DATA.hero.portraitUrl;
+
+    document.getElementById('about-heading').textContent = SITE_DATA.about.heading;
+    document.getElementById('about-paragraphs').innerHTML = SITE_DATA.about.paragraphs
+      .map(p => `<p>${p}</p>`).join('');
+    document.getElementById('about-stats').innerHTML = SITE_DATA.about.stats
+      .map(s => `<div><div class="stat-num">${s.number}</div><div class="stat-label">${s.label}</div></div>`).join('');
+
+    document.getElementById('pillars-container').innerHTML = SITE_DATA.pillars
+      .map(p => `
+        <div class="pillar-card">
+          <div class="pillar-num">${p.number}</div>
+          <h3>${p.title}</h3>
+          <div class="pillar-summary">${p.summary}</div>
+          <div class="pillar-detail">${p.detail}</div>
+        </div>
+      `).join('');
+
+    // Slider ảnh thực tế
+    let currentSlide = 0;
+    function renderSlide() {
+      const item = SITE_DATA.gallery[currentSlide];
+      document.getElementById('slide-img').src = item.image;
+      document.getElementById('slide-caption').textContent = item.caption;
+    }
+    function changeSlide(step) {
+      currentSlide = (currentSlide + step + SITE_DATA.gallery.length) % SITE_DATA.gallery.length;
+      renderSlide();
+    }
+    renderSlide();
+
+    // Chương trình đồng hành
+    document.getElementById('programs-container').innerHTML = SITE_DATA.programs
+      .map(pr => `
+        <div class="program-card">
+          <div>
+            <span class="program-tag">${pr.tag}</span>
+            <h3>${pr.name}</h3>
+            <p>${pr.desc}</p>
+          </div>
+          <a href="#phan-hoi" onclick="selectTopic('${pr.name}')" class="btn-outline" style="text-align:center;">${pr.actionText}</a>
+        </div>
+      `).join('');
+
+    // Render Form phản hồi (Ưu tiên Google Form nhúng nếu có, ngược lại dùng Form tích hợp)
+    document.getElementById('form-heading').textContent = SITE_DATA.contactForm.heading;
+    document.getElementById('form-subheading').textContent = SITE_DATA.contactForm.subheading;
+
+    const formArea = document.getElementById('form-render-area');
+    if (SITE_DATA.contactForm.googleFormEmbedUrl) {
+      formArea.innerHTML = `<iframe src="${SITE_DATA.contactForm.googleFormEmbedUrl}" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0">Đang tải biểu mẫu...</iframe>`;
+    } else {
+      formArea.innerHTML = `
+        <form id="feedbackForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label>Họ và tên của bạn *</label>
+            <input type="text" id="senderName" required placeholder="Nhập họ tên..." />
+          </div>
+          <div class="form-group">
+            <label>Số điện thoại (Zalo) hoặc Email liên hệ *</label>
+            <input type="text" id="senderContact" required placeholder="Để nhận phản hồi trực tiếp..." />
+          </div>
+          <div class="form-group">
+            <label>Chủ đề bạn quan tâm</label>
+            <select id="senderTopic">
+              <option value="Luyện giọng nói nội lực">Luyện giọng nói nội lực</option>
+              <option value="Đọc sách nhanh & Sơ đồ tư duy">Đọc sách nhanh & Sơ đồ tư duy</option>
+              <option value="Ứng dụng AI trong giáo dục & công việc">Ứng dụng AI trong giáo dục & công việc</option>
+              <option value="Lớp Ươm Mầm Phúc Đức cho con">Lớp Ươm Mầm Phúc Đức cho con</option>
+              <option value="Hợp tác đào tạo / Chia sẻ chuyên môn">Hợp tác đào tạo / Chia sẻ chuyên môn</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Lời nhắn hoặc câu hỏi của bạn *</label>
+            <textarea id="senderMessage" rows="4" required placeholder="Chia sẻ điều bạn đang quan tâm..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">Gửi Phản Hồi Trực Tiếp</button>
+          <div id="formNotice" class="form-notice"></div>
+        </form>
+      `;
+    }
+
+    function selectTopic(topicName) {
+      const selectEl = document.getElementById('senderTopic');
+      if (selectEl) {
+        const opt = document.createElement('option');
+        opt.value = topicName;
+        opt.text = topicName;
+        opt.selected = true;
+        selectEl.add(opt);
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('senderName').value;
+      const contact = document.getElementById('senderContact').value;
+      const topic = document.getElementById('senderTopic').value;
+      const msg = document.getElementById('senderMessage').value;
+      const notice = document.getElementById('formNotice');
+
+      // Nếu chị có gắn endpoint Formspree thì gửi ngầm trực tiếp về Gmail
+      if (SITE_DATA.contactForm.formspreeEndpoint) {
+        fetch(SITE_DATA.contactForm.formspreeEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, contact, topic, message: msg })
+        }).then(() => {
+          notice.style.display = 'block';
+          notice.textContent = `Cảm ơn ${name}! Lời nhắn của bạn đã được gửi thành công.`;
+          document.getElementById('feedbackForm').reset();
+        });
+      } else {
+        // Mở trình gửi Email kèm sẵn nội dung người dùng vừa nhập (không cần backend)
+        const subject = encodeURIComponent(`[luuhiendung.space] ${topic} - Từ ${name}`);
+        const body = encodeURIComponent(`Họ tên: ${name}\nLiên hệ: ${contact}\nChủ đề: ${topic}\n\nNội dung:\n${msg}`);
+        window.location.href = `mailto:${SITE_DATA.contactForm.emailAddress}?subject=${subject}&body=${body}`;
+        notice.style.display = 'block';
+        notice.textContent = `Cảm ơn ${name}! Hệ thống đang chuyển lời nhắn của bạn tới hộp thư chuyên môn.`;
+      }
+    }
+
+    // Kích hoạt hiệu ứng lật mở từng lớp khi cuộn trang
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal-layer').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
