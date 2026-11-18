@@ -1,138 +1,121 @@
 <!-- ==========================================================================
-     COMPONENT: HERO (Khối chào đầu trang)
-     Thương hiệu: LƯU HIỀN DUNG (luuhiendung.space)
-     Cảm xúc: Kết hợp Ruby Nguyễn (ấm áp, chiều sâu) & Trần Khánh Tư (logic, uy tín)
+     COMPONENT: HERO SECTION (Chuẩn phong cách RNI Institute)
+     Bao gồm:
+     1. Khối Hero Banner tràn viền sâu lắng (Chữ viết tay nghệ thuật + Master Title)
+     2. Khối thẻ nổi phủ lên chân Banner (Overlapping Floating Cards)
      ========================================================================== -->
-<section class="section hero-section" id="hero" style="padding-top: 110px; padding-bottom: 90px;">
+
+<!-- 1. Hero Banner Tràn Viền -->
+<section class="hero-rni-banner" id="hero">
   <div class="container">
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 56px; align-items: center;">
+    <div class="hero-rni-content">
       
-      <!-- Cột trái: Thông điệp truyền cảm hứng & Định vị -->
-      <div>
-        <span class="section-tag">
-          <span>🌿</span> Nhà Thực Hành Khoa Học Ứng Dụng
-        </span>
+      <!-- Cột Trái: Khung Chân Dung Thần Thái (Portrait Frame Baroque Dáng Vòm) -->
+      <div class="hero-portrait-wrapper">
+        <div class="hero-portrait-frame">
+          <div class="hero-portrait-inner">
+            <div class="portrait-monogram">HD</div>
+            <h2 class="portrait-name">Lưu Hiền Dung</h2>
+            <span class="portrait-role">Nhà Thực Hành Khoa Học Ứng Dụng</span>
+            
+            <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.15); width: 100%; font-size: 0.88rem; color: #D5E2DC;">
+              <span>🌿 Dưỡng Thân · Dưỡng Tâm · Khai Trí</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <h1 class="serif-title" style="margin-bottom: 24px; color: var(--brand-primary);">
-          Đánh thức tiềm năng vô hạn từ sự hợp nhất Thân – Tâm – Trí.
-        </h1>
+      <!-- Cột Phải: Bố Cục Chữ Tinh Hoa Chuẩn RNI -->
+      <div class="hero-typography">
+        
+        <!-- Chữ viết tay mềm mại bay bổng (*"Khai phóng"*) -->
+        <div class="hero-script-flourish">Khai phóng</div>
 
-        <p class="lead" style="margin-bottom: 24px;">
-          Chào bạn, tôi là <strong>Lưu Hiền Dung</strong>. Trong hành trình phụng sự giáo dục và cộng đồng, 
-          tôi chọn gắn kết phương pháp khoa học não bộ hiện đại với sự bình an sâu thẳm của nội tâm, 
-          để mỗi người có thể tự tin khai phóng trí tuệ và sống một cuộc đời trọn vẹn, an vui.
+        <!-- Tiêu đề in hoa quyền năng (**VIÊN NGỌC THÂN – TÂM – TRÍ**) -->
+        <h1 class="hero-master-title">Viên Ngọc Thân – Tâm – Trí</h1>
+
+        <!-- Đường kẻ phân cách siêu mảnh màu vàng đồng -->
+        <div class="hero-thin-divider"></div>
+
+        <!-- Tagline 1: Chữ nghiêng in hoa truyền cảm hứng -->
+        <p class="hero-tagline-italic">
+          TRỞ VỀ VỚI NỘI TÂM TĨNH LẶNG & TRÍ TUỆ KHAI MỞ TỰ NHIÊN
         </p>
 
-        <!-- 4 giá trị trọng tâm dạng thanh hiển thị nhẹ nhàng -->
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px;">
-          <span style="font-size: 0.92rem; padding: 6px 16px; border-radius: var(--radius-full); background: var(--bg-surface-elevated); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle);">
-            🧠 Khoa học não bộ
-          </span>
-          <span style="font-size: 0.92rem; padding: 6px 16px; border-radius: var(--radius-full); background: var(--bg-surface-elevated); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle);">
-            🧘 Dưỡng Thân – Dưỡng Tâm
-          </span>
-          <span style="font-size: 0.92rem; padding: 6px 16px; border-radius: var(--radius-full); background: var(--bg-surface-elevated); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle);">
-            🏆 Thể thao Trí tuệ
-          </span>
-          <span style="font-size: 0.92rem; padding: 6px 16px; border-radius: var(--radius-full); background: var(--bg-surface-elevated); color: var(--text-main); font-weight: 500; border: 1px solid var(--border-subtle);">
-            🤖 AI Thực chiến
-          </span>
-        </div>
+        <!-- Tagline 2: Đoạn văn mô tả sứ mệnh -->
+        <p class="hero-tagline-desc">
+          Dành cho những người khao khát hợp nhất phương pháp khoa học não bộ hiện đại 
+          với năng lượng bình an bên trong, để chuyển biến sâu sắc và sống đời phụng sự trọn vẹn.
+        </p>
 
-        <!-- Các nút chuyển hành động -->
-        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-          <a href="#pillars" class="btn btn-primary">
-            <span>Khám phá 4 Trụ Cột</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Hàng nút bấm chuẩn RNI -->
+        <div class="hero-actions-row">
+          <a href="#pillars" class="btn-rni btn-rni-gold">
+            <span>Khám Phá 4 Trụ Cột</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <a href="#about" class="btn btn-outline">Về Lưu Hiền Dung</a>
+          <a href="#about" class="btn-rni btn-rni-outline">Hành Trình Chuyên Môn</a>
         </div>
-      </div>
 
-      <!-- Cột phải: Khối cấu trúc uy tín chuyên môn (Chất Trần Khánh Tư) -->
-      <div>
-        <div class="card" style="background: linear-gradient(160deg, #FFFFFF 0%, #FAF6EE 100%); border-left: 5px solid var(--brand-primary); box-shadow: var(--shadow-md);">
-          
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
-            <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brand-accent);">
-              Vị Thế Chuyên Môn & Trách Nhiệm
-            </span>
-            <span style="font-size: 1.2rem; color: var(--brand-accent);">✦</span>
-          </div>
-
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
-            
-            <li style="display: flex; gap: 16px; align-items: flex-start;">
-              <div style="min-width: 38px; height: 38px; border-radius: var(--radius-md); background: var(--brand-primary-light); color: var(--brand-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700;">
-                01
-              </div>
-              <div>
-                <strong style="color: var(--text-main); font-size: 1.05rem; display: block; line-height: 1.4;">
-                  Giám đốc Trung tâm Dưỡng Thân – Dưỡng Tâm
-                </strong>
-                <span style="font-size: 0.92rem; color: var(--text-muted);">
-                  Kiến tạo không gian thực hành chuyển hóa thân tâm và phục hồi năng lượng tại Lâm Đồng.
-                </span>
-              </div>
-            </li>
-
-            <li style="display: flex; gap: 16px; align-items: flex-start;">
-              <div style="min-width: 38px; height: 38px; border-radius: var(--radius-md); background: var(--brand-primary-light); color: var(--brand-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700;">
-                02
-              </div>
-              <div>
-                <strong style="color: var(--text-main); font-size: 1.05rem; display: block; line-height: 1.4;">
-                  Thư ký Viện Phát triển Sáng tạo Sơ đồ Tư duy & Bản quyền VN
-                </strong>
-                <span style="font-size: 0.92rem; color: var(--text-muted);">
-                  Đồng hành nghiên cứu, chuẩn hóa và lan tỏa phương pháp tư duy hình ảnh khoa học.
-                </span>
-              </div>
-            </li>
-
-            <li style="display: flex; gap: 16px; align-items: flex-start;">
-              <div style="min-width: 38px; height: 38px; border-radius: var(--radius-md); background: var(--brand-primary-light); color: var(--brand-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700;">
-                03
-              </div>
-              <div>
-                <strong style="color: var(--text-main); font-size: 1.05rem; display: block; line-height: 1.4;">
-                  Trọng tài Quốc tế Thể thao Trí tuệ (Mind Sports)
-                </strong>
-                <span style="font-size: 0.92rem; color: var(--text-muted);">
-                  Giám khảo chấm thi Sơ đồ tư duy được chứng nhận tiêu chuẩn quốc tế.
-                </span>
-              </div>
-            </li>
-
-            <li style="display: flex; gap: 16px; align-items: flex-start;">
-              <div style="min-width: 38px; height: 38px; border-radius: var(--radius-md); background: var(--brand-primary-light); color: var(--brand-primary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700;">
-                04
-              </div>
-              <div>
-                <strong style="color: var(--text-main); font-size: 1.05rem; display: block; line-height: 1.4;">
-                  Chuyên gia Ứng dụng Trí tuệ Nhân tạo (AI) Thực chiến
-                </strong>
-                <span style="font-size: 0.92rem; color: var(--text-muted);">
-                  Tối ưu hóa năng suất, cá nhân hóa học tập và giải phóng sức sáng tạo con người.
-                </span>
-              </div>
-            </li>
-
-          </ul>
-
-          <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; color: var(--text-faint);">
-            <span>🌿 Lâm Đồng & Toàn quốc</span>
-            <span style="color: var(--brand-primary); font-weight: 600;">Phụng sự vì thế hệ tương lai</span>
-          </div>
-
-        </div>
       </div>
 
     </div>
+  </div>
+</section>
 
+<!-- 2. Khối Thẻ Nổi Phủ Lên Đáy Hero (Overlapping Floating Card) -->
+<section class="floating-hero-card-section" aria-label="Vị thế chuyên môn">
+  <div class="container">
+    <div class="floating-hero-card">
+      
+      <div class="floating-card-header">
+        <span class="floating-card-tag">Định Vị Chuyên Môn & Trọng Trách</span>
+        <h2 class="floating-card-title">Hệ Thống Trụ Cột Hoạt Động Cốt Lõi</h2>
+      </div>
+
+      <div class="credentials-grid">
+        
+        <!-- Thẻ 1 -->
+        <div class="credential-item">
+          <span class="credential-num">01 / TRUNG TÂM</span>
+          <h3 class="credential-name">Giám Đốc Trung Tâm Dưỡng Thân – Dưỡng Tâm</h3>
+          <p class="credential-desc">
+            Không gian thực hành chuyển hóa thân tâm, phục hồi năng lượng và dưỡng lành tại cao nguyên Lâm Đồng.
+          </p>
+        </div>
+
+        <!-- Thẻ 2 -->
+        <div class="credential-item">
+          <span class="credential-num">02 / HỌC THUẬT</span>
+          <h3 class="credential-name">Thư Ký Viện Sơ Đồ Tư Duy & Bản Quyền VN</h3>
+          <p class="credential-desc">
+            Đồng hành nghiên cứu, chuẩn hóa và bảo trợ giá trị bản quyền cho phương pháp tư duy hình ảnh khoa học.
+          </p>
+        </div>
+
+        <!-- Thẻ 3 -->
+        <div class="credential-item">
+          <span class="credential-num">03 / QUỐC TẾ</span>
+          <h3 class="credential-name">Trọng Tài Quốc Tế Thể Thao Trí Tuệ</h3>
+          <p class="credential-desc">
+            Giám khảo chấm thi Sơ đồ tư duy được chứng nhận tiêu chuẩn quốc tế (Mind Sports).
+          </p>
+        </div>
+
+        <!-- Thẻ 4 -->
+        <div class="credential-item">
+          <span class="credential-num">04 / CÔNG NGHỆ</span>
+          <h3 class="credential-name">Chuyên Gia Ứng Dụng AI Thực Chiến</h3>
+          <p class="credential-desc">
+            Đưa trí tuệ nhân tạo vào thực tiễn giáo dục và công việc, giải phóng sức sáng tạo và tối ưu hóa hiệu quả.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </section>

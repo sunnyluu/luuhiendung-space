@@ -26,10 +26,12 @@
 
 Website là sự giao thoa hài hòa giữa hai phong cách truyền cảm hứng:
 
-### A. Chất Ruby Nguyễn (Thanh thoát & Chiều sâu Nhân văn)
-* Cảm giác ấm áp, bình an, chạm đến cảm xúc và khơi gợi năng lượng tích cực từ bên trong.
-* Tận dụng tối đa **khoảng trắng (whitespace)** để trang web luôn có độ "thở", không dồn nén thông tin.
-* Kiểu chữ mềm mại, tinh tế, truyền cảm hứng một cách điềm đạm, lắng đọng.
+### A. Chất Ruby Nguyễn & Phong cách RNI Institute (https://www.rni.institute/)
+* **Vẻ đẹp thanh tao, quý phái & sâu lắng:** Mang đậm tinh thần của Học viện Giáo dục Chậm RNI (Ruby Nguyen Institute).
+* **Bố cục Header:** Nền trắng tinh khôi (#ffffff), logo huy hiệu tròn sang trọng, menu chữ in hoa Work Sans thanh lịch, nút kêu gọi hành động bo góc nhẹ (6px) có hiệu ứng chuyển động mượt mà.
+* **Bố cục Hero Banner:** Tràn viền với nền chuyển sắc xanh lục bảo Đà Lạt quý phái, chữ viết tay nghệ thuật mềm mại (*"Khai phóng"*), tiêu đề in hoa sắc nét (**VIÊN NGỌC THÂN – TÂM – TRÍ**), đường kẻ siêu mảnh màu vàng đồng tinh tế và khung chân dung dáng vòm Baroque cổ điển.
+* **Hiệu ứng Khối thẻ nổi (Overlapping Floating Cards):** Khối thẻ trắng bo góc mềm mại phủ lên đáy của Hero Banner với bóng đổ êm dịu, tạo chiều sâu thị giác và độ "thở" cao cấp.
+* **Cảm xúc:** Ấm áp, bình an, chạm đến chiều sâu nội tâm, khơi gợi năng lượng tích cực và lòng trắc ẩn.
 
 ### B. Chất Trần Khánh Tư (Hệ thống hóa & Uy tín Sắc nét)
 * Bố cục logic, khoa học, phân chia các khối nội dung mạch lạc, dứt khoát.
