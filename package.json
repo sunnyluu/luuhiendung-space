@@ -1,12 +1,12 @@
 {
   "name": "luuhiendung-space",
   "version": "1.0.0",
-  "description": "Lưu Hiển Dũng Space - Không gian cá nhân & danh mục dự án",
+  "description": "Lưu Hiền Dung (luuhiendung.space) - Website thương hiệu cá nhân",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": ["personal-website", "modular", "clean-design"],
-  "author": "Lưu Hiển Dũng",
+  "keywords": ["personal-branding", "luuhiendung", "mind-sports", "mind-map", "wellness"],
+  "author": "Lưu Hiền Dung",
   "license": "MIT"
 }

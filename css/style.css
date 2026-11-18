@@ -1,48 +1,60 @@
 /* ==========================================================================
-   LUU HIEN DUNG SPACE - GLOBAL STYLESHEET
-   Phong cách: Tinh tế, Chữ lớn dễ đọc, Tông màu trang nhã
+   LƯU HIỀN DUNG SPACE (luuhiendung.space) - GLOBAL STYLESHEET
+   Phong cách: Tinh tế, Thanh thoát (Ruby Nguyễn) & Logic, Hệ thống (Trần Khánh Tư)
+   Bảng màu: Trắng kem ấm (#FAF8F5), Xám than trầm (#2C3531),
+             Xanh lục bảo Đà Lạt (#1E4D3B), Vàng đồng tinh tế (#C59B27)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap');
 
-/* --- 1. CSS VARIABLES (DESIGN TOKENS) --- */
+/* --- 1. CSS VARIABLES (DESIGN SYSTEM TOKENS) --- */
 :root {
-  --bg-primary: #FAF9F6;
-  --bg-surface: #FFFFFF;
-  --bg-surface-elevated: #F4F3EF;
-  --bg-glass: rgba(250, 249, 246, 0.88);
-  --bg-glass-card: rgba(255, 255, 255, 0.75);
+  /* Nền và Bề mặt */
+  --bg-primary: #FAF8F5;          /* Trắng kem ấm áp */
+  --bg-surface: #FFFFFF;          /* Trắng tinh khôi */
+  --bg-surface-elevated: #F5EFE6; /* Trắng xám be dịu nhẹ */
+  --bg-glass: rgba(250, 248, 245, 0.90);
+  --bg-glass-nav: rgba(250, 248, 245, 0.94);
 
-  --text-main: #1C2024;
-  --text-muted: #59636E;
-  --text-faint: #8B949E;
-  --text-inverse: #FFFFFF;
+  /* Màu chữ (Typography) */
+  --text-main: #2C3531;           /* Xám than trầm dễ đọc, tránh gắt mắt */
+  --text-muted: #5A625E;          /* Xám trung tính ấm áp */
+  --text-faint: #8A928E;          /* Xám nhạt dịu nhẹ */
+  --text-inverse: #FFFFFF;        /* Trắng trên nền đậm */
 
-  --brand-primary: #1F3A34;
-  --brand-primary-hover: #162B26;
-  --brand-accent: #C5A880;
-  --brand-accent-hover: #B59569;
-  --brand-accent-soft: #F5EFEB;
+  /* Thương hiệu & Điểm nhấn */
+  --brand-primary: #1E4D3B;       /* Xanh lục bảo sâu lắng cao nguyên Đà Lạt */
+  --brand-primary-hover: #15382B;
+  --brand-primary-light: #EBF3EE; /* Nền xanh ngọc phớt */
+  --brand-accent: #C59B27;        /* Vàng đồng tinh tế, minh triết */
+  --brand-accent-hover: #B0881F;
+  --brand-accent-soft: #FAF4E5;   /* Nền vàng đồng phớt ấm */
 
-  --border-subtle: #E8E6E1;
-  --border-card: rgba(232, 230, 225, 0.8);
-  --border-focus: #C5A880;
+  /* Đường viền & Phân cách */
+  --border-subtle: #EBE4D8;
+  --border-card: #E3DBD0;
+  --border-focus: #C59B27;
 
-  --shadow-sm: 0 2px 8px rgba(28, 32, 36, 0.04);
-  --shadow-md: 0 8px 24px rgba(28, 32, 36, 0.06);
-  --shadow-lg: 0 16px 40px rgba(28, 32, 36, 0.08);
+  /* Bóng đổ (Elevation & Soft Shadows) */
+  --shadow-sm: 0 2px 10px rgba(44, 53, 49, 0.04);
+  --shadow-md: 0 8px 30px rgba(44, 53, 49, 0.07);
+  --shadow-lg: 0 16px 48px rgba(44, 53, 49, 0.10);
 
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  /* Bo góc */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
   --radius-full: 9999px;
 
-  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --transition-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  --header-height: 84px;
+  /* Phông chữ */
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --header-height: 88px;
 }
 
-/* --- 2. CSS RESET & NỀN TẢNG --- */
+/* --- 2. RESET & CƠ SỞ --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -50,46 +62,52 @@
 }
 
 html {
-  font-size: 18px; /* Cỡ chữ cơ bản lớn, rõ nét */
+  font-size: 18px; /* Cỡ chữ cơ sở lớn, rõ ràng, thân thiện mọi độ tuổi */
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-main);
-  line-height: 1.75;
+  line-height: 1.8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* --- 3. BỐ CỤC CHUNG (CONTAINER & TYPOGRAPHY) --- */
+/* --- 3. BỐ CỤC CHUNG & TYPOGRAPHY --- */
 .container {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.32;
   letter-spacing: -0.015em;
 }
 
+/* Tiêu đề có chiều sâu cảm xúc kết hợp phông serif thanh thoát */
+.serif-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 h1 {
-  font-size: 2.85rem;
-  font-weight: 700;
-  line-height: 1.22;
+  font-size: 2.9rem;
+  line-height: 1.25;
 }
 
 h2 {
-  font-size: 2.1rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.1rem;
 }
 
 h3 {
@@ -98,12 +116,12 @@ h3 {
 
 p {
   color: var(--text-muted);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.3rem;
 }
 
 p.lead {
   font-size: 1.25rem;
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--text-main);
   font-weight: 400;
 }
@@ -119,9 +137,9 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 12px 26px;
-  font-size: 1rem;
+  gap: 12px;
+  padding: 13px 30px;
+  font-size: 1.02rem;
   font-weight: 600;
   border-radius: var(--radius-full);
   cursor: pointer;
@@ -134,30 +152,30 @@ a {
 .btn-primary {
   background-color: var(--brand-primary);
   color: var(--text-inverse);
-  box-shadow: 0 4px 14px rgba(31, 58, 52, 0.2);
+  box-shadow: 0 4px 16px rgba(30, 77, 59, 0.22);
 }
 
 .btn-primary:hover {
   background-color: var(--brand-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(31, 58, 52, 0.28);
+  box-shadow: 0 8px 24px rgba(30, 77, 59, 0.32);
   color: var(--text-inverse);
 }
 
 .btn-accent {
   background-color: var(--brand-accent);
-  color: var(--text-inverse);
+  color: #FFFFFF;
 }
 
 .btn-accent:hover {
   background-color: var(--brand-accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(197, 168, 128, 0.35);
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.35);
 }
 
 .btn-outline {
   background-color: transparent;
-  border-color: var(--border-subtle);
+  border-color: var(--border-card);
   color: var(--text-main);
 }
 
@@ -167,9 +185,9 @@ a {
   color: var(--brand-primary);
 }
 
-/* --- 5. KHUNG CHỨA CÁC PHẦN (SECTIONS) --- */
+/* --- 5. KHUNG CÁC PHẦN (SECTIONS & PILLARS) --- */
 .section {
-  padding: 90px 0;
+  padding: 100px 0;
   position: relative;
 }
 
@@ -180,24 +198,30 @@ a {
 }
 
 .section-tag {
-  display: inline-block;
-  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--brand-accent);
-  background-color: var(--brand-accent-soft);
-  padding: 6px 16px;
+  letter-spacing: 0.14em;
+  color: var(--brand-primary);
+  background-color: var(--brand-primary-light);
+  padding: 7px 18px;
   border-radius: var(--radius-full);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
-/* Thẻ mẫu (Card) */
+.section-tag.accent {
+  color: #9A7718;
+  background-color: var(--brand-accent-soft);
+}
+
 .card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 36px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
 }
@@ -215,9 +239,9 @@ a {
   left: 0;
   right: 0;
   height: var(--header-height);
-  background-color: var(--bg-glass);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background-color: var(--bg-glass-nav);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-subtle);
   z-index: 1000;
   display: flex;
@@ -227,7 +251,7 @@ a {
 
 .site-header.scrolled {
   box-shadow: var(--shadow-sm);
-  background-color: rgba(250, 249, 246, 0.96);
+  background-color: rgba(250, 248, 245, 0.98);
 }
 
 .header-container {
@@ -240,33 +264,31 @@ a {
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-weight: 700;
-  font-size: 1.25rem;
+  gap: 16px;
   color: var(--text-main);
-  letter-spacing: -0.01em;
 }
 
 .logo-badge {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--brand-primary) 0%, #2A4E45 100%);
+  background: linear-gradient(135deg, var(--brand-primary) 0%, #2A6650 100%);
   color: var(--text-inverse);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.05rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  box-shadow: 0 4px 10px rgba(31, 58, 52, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 12px rgba(30, 77, 59, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: var(--transition-smooth);
 }
 
 .site-logo:hover .logo-badge {
-  transform: rotate(-3deg) scale(1.05);
-  box-shadow: 0 6px 16px rgba(31, 58, 52, 0.28);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(30, 77, 59, 0.32);
 }
 
 .logo-text {
@@ -276,17 +298,20 @@ a {
 }
 
 .logo-name {
-  font-size: 1.2rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--brand-primary);
+  letter-spacing: -0.01em;
 }
 
 .logo-sub {
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: var(--brand-accent);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  margin-top: 2px;
 }
 
 /* Navigation Links */
@@ -304,7 +329,7 @@ a {
 }
 
 .nav-link {
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-muted);
   position: relative;
@@ -337,14 +362,13 @@ a {
   font-weight: 600;
 }
 
-/* Header Actions */
+/* Actions */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/* Mobile Toggle */
 .mobile-toggle {
   display: none;
   background: none;
@@ -364,7 +388,7 @@ a {
 }
 
 /* Responsive Menu */
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .site-nav {
     position: fixed;
     top: var(--header-height);
@@ -372,7 +396,7 @@ a {
     right: 0;
     background-color: var(--bg-surface);
     border-bottom: 1px solid var(--border-subtle);
-    padding: 24px;
+    padding: 28px;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
@@ -392,7 +416,7 @@ a {
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 18px;
     width: 100%;
   }
 
@@ -415,7 +439,7 @@ a {
   .site-nav .mobile-cta {
     display: inline-flex;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 10px;
   }
 }
 
@@ -424,5 +448,5 @@ a {
   margin-top: auto;
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
-  padding: 60px 0 36px;
+  padding: 70px 0 40px;
 }
