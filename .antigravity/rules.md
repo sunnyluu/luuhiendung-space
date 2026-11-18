@@ -13,9 +13,12 @@
 - **Trọng tài quốc tế được chứng nhận về Thể thao Trí tuệ (Mind Sports) & Giám khảo chấm thi Sơ đồ tư duy**
 - **Sứ mệnh:** Kết nối Thân – Tâm – Trí trên nền tảng khoa học não bộ ứng dụng và tinh thần phụng sự cộng đồng bền vững.
 
-## 3. NGÔN NGỮ THIẾT KẾ (RUBY NGUYỄN + TRẦN KHÁNH TƯ)
-- **Cảm xúc:** Thanh thoát, ấm áp, nhân văn, chiều sâu nội tâm (chất Ruby Nguyễn) kết hợp bố cục logic, minh chứng chuyên môn sắc nét, hệ thống trụ cột rõ ràng (chất Trần Khánh Tư).
-- **Khoảng trắng:** Rộng rãi, không dồn nén chữ hay hình ảnh, tạo độ thở thư thái.
+## 3. NGÔN NGỮ THIẾT KẾ (CHUẨN RNI INSTITUTE + TRẦN KHÁNH TƯ)
+- **Chuẩn phong cách RNI Institute (Ruby Nguyen Institute - https://www.rni.institute/):**
+  - Header nền trắng tinh khôi, menu chữ in hoa Work Sans thanh lịch, nút bấm bo góc 6px scale nhẹ khi hover.
+  - Hero Banner tràn viền sâu lắng với chữ viết tay (*"Khai phóng"*), tiêu đề in hoa (**VIÊN NGỌC THÂN – TÂM – TRÍ**), đường kẻ vàng đồng siêu mảnh và khung chân dung dáng vòm Baroque.
+  - Khối thẻ trắng nổi (Overlapping Floating Card) phủ lên chân banner tạo độ sâu và đẳng cấp thị giác.
+- **Khoảng trắng:** Rộng rãi, thanh thoát, trang web luôn có độ "thở" tĩnh lặng.
 - **Bảng màu:**
   - Nền: `#FAF8F5` (Trắng kem ấm áp)
   - Chữ: `#2C3531` (Xám than trầm dịu mắt)
