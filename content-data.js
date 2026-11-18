@@ -3,24 +3,24 @@ const SITE_DATA = {
   hero: {
     subtitle: "NHÀ THỰC HÀNH KHOA HỌC ỨNG DỤNG • TRỌNG TÀI THỂ THAO TRÍ TUỆ QUỐC TẾ",
     title: "Lưu Hiền Dung",
-    tagline: "Đánh thức nội lực Thân – Tâm – Trí bằng khoa học não bộ, hơi thở tự nhiên và công nghệ vị nhân sinh.",
-    ctaPrimary: "Khám phá 4 Trụ cột Tri thức",
+    tagline: "Lập trình não bộ tự nhiên và đánh thức nội lực Thân – Tâm – Trí bằng phương pháp khoa học thực chứng, hơi thở sâu và tình thương phụng sự.",
+    ctaPrimary: "Khám phá 4 Trụ cột Não bộ",
     ctaSecondary: "Gửi lời nhắn & Kết nối",
-    // Thay đường dẫn ảnh chân dung sang trọng của chị tại đây
-    portraitUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+    // Ảnh chân dung thật của chị Lưu Hiền Dung
+    portraitUrl: "images/luu-hien-dung.jpg"
   },
 
   // 2. TRIẾT LÝ & VAI TRÒ PHỤNG SỰ
   about: {
     heading: "Hành trình Thực chứng & Phụng sự",
     paragraphs: [
-      "Trên cương vị Giám đốc Trung tâm Dưỡng Thân – Dưỡng Tâm, Thư ký Viện Phát triển Sáng tạo Sơ đồ Tư duy và Bản quyền Việt Nam, cùng vai trò Trọng tài quốc tế các giải đấu Thể thao trí tuệ, tôi dành trọn tâm huyết để chuyển hóa những nguyên lý khoa học não bộ thành phương pháp rèn luyện đơn giản, dễ ứng dụng cho mỗi gia đình Việt.",
-      "Mỗi bài giảng, mỗi trang sách hay mỗi hơi thở sâu đều hướng về một đích đến chung: giúp người học làm chủ năng lượng, khai phóng tư duy và bình an kiến tạo giá trị."
+      "Trên cương vị Giám đốc Trung tâm Dưỡng Thân – Dưỡng Tâm (Lâm Đồng), Thư ký Viện Phát triển Sáng tạo Sơ đồ Tư duy và Bản quyền Việt Nam, cùng vai trò Trọng tài quốc tế các giải đấu Thể thao trí tuệ, tôi dành trọn tâm huyết để chuyển hóa những nguyên lý khoa học não bộ thành phương pháp rèn luyện đơn giản, dễ ứng dụng và ấm áp tình người cho mỗi gia đình Việt.",
+      "Đối với tôi, 'Lập trình não bộ' không phải là công thức máy móc, mà là quá trình kiên trì thấu hiểu cơ chế tự nhiên của não bộ, cài đặt lại những thói quen tích cực, nuôi dưỡng lòng biết ơn và bình an kiến tạo giá trị sống bền vững."
     ],
     stats: [
       { number: "40.100+", label: "Cây xanh & Hạt mầm tri thức lan tỏa" },
       { number: "Quốc tế", label: "Trọng tài Mind Sports & Sơ đồ tư duy" },
-      { number: "4 Trụ cột", label: "Phương pháp rèn luyện Thân – Tâm – Trí" }
+      { number: "4 Trụ cột", label: "Lập trình & Rèn luyện Thân – Tâm – Trí" }
     ]
   },
 
@@ -28,27 +28,27 @@ const SITE_DATA = {
   pillars: [
     {
       number: "01",
-      title: "Luyện Giọng Nói Nội Lực",
-      summary: "Kỹ thuật thở bụng sâu ('vắt hơi') kết hợp vận động cơ thể và điều khí.",
-      detail: "Giải phóng sự căng cứng vùng cổ họng, khơi thông dòng chảy năng lượng từ đan điền để kiến tạo chất giọng trầm ấm, vang sáng, truyền cảm và bền bỉ khi giảng dạy hay thuyết trình."
+      title: "Luyện Giọng Nói Nội Lực & Dưỡng Khí",
+      summary: "Kỹ thuật thở bụng sâu ('vắt hơi') kết hợp điều khí và giải phóng căng cứng.",
+      detail: "Giải phóng sự căng cứng vùng cổ họng, khơi thông dòng chảy năng lượng từ đan điền để kiến tạo chất giọng trầm ấm, vang sáng, truyền cảm và bền bỉ khi giảng dạy, thuyết trình hay trò chuyện cùng con trẻ."
     },
     {
       number: "02",
       title: "Đọc Sách Nhanh (Speed Reading)",
-      summary: "Kích hoạt đồng bộ hai bán cầu não và mở rộng tầm nhìn thị giác.",
-      detail: "Loại bỏ thói quen đọc thầm gây chậm trễ, giúp học sinh, giáo viên và người đi làm tăng tốc độ tiếp nhận tri thức gấp nhiều lần mà vẫn thấu hiểu sâu sắc và ghi nhớ bền vững."
+      summary: "Lập trình khả năng tiếp nhận tri thức đa chiều, kích hoạt hai bán cầu não.",
+      detail: "Loại bỏ thói quen đọc thầm gây phân tâm, mở rộng trường thị giác giúp học sinh, giáo viên và người đi làm nâng tốc độ đọc gấp 5-10 lần mà vẫn thấu cảm sâu sắc và ghi nhớ bền vững."
     },
     {
       number: "03",
-      title: "Sơ Đồ Tư Duy (Mindmap)",
-      summary: "Hệ thống hóa tư duy theo chuẩn quốc tế Tony Buzan.",
-      detail: "Biến những khối kiến thức khô khan thành bức tranh trực quan sinh động bằng từ khóa, màu sắc và hình ảnh — nền tảng cốt lõi để rèn luyện trí nhớ và chinh phục các đấu trường Thể thao trí tuệ."
+      title: "Sơ Đồ Tư Duy (Mindmap Chuẩn Quốc Tế)",
+      summary: "Tái cấu trúc bản đồ tư duy não bộ theo chuẩn quốc tế Tony Buzan.",
+      detail: "Chuyển hóa dữ liệu phức tạp thành bức tranh trực quan sinh động bằng từ khóa, màu sắc và hình ảnh liên kết — chìa khóa vàng để rèn luyện trí nhớ đỉnh cao và chinh phục các đấu trường Thể thao trí tuệ."
     },
     {
       number: "04",
-      title: "Ứng Dụng AI Thực Chiến",
-      summary: "Làm chủ trí tuệ nhân tạo trong giáo dục, quản trị và sáng tạo.",
-      detail: "Hướng dẫn giáo viên, phụ huynh và nhà quản lý biến AI thành người cộng sự đắc lực để thiết kế bài giảng, tối ưu hóa quy trình làm việc và tiết kiệm thời gian cho những giá trị cốt lõi."
+      title: "Ứng Dụng AI Thực Chiến Vị Nhân Sinh",
+      summary: "Làm chủ trí tuệ nhân tạo để phụng sự giáo dục, công việc và cuộc sống.",
+      detail: "Đồng hành cùng giáo viên, phụ huynh và nhà quản lý biến AI thành người cộng sự đắc lực, tự động hóa tác vụ cơ học để dành trọn vẹn thời gian cho sự kết nối con người và giá trị cốt lõi."
     }
   ],
 
